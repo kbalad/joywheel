@@ -16,14 +16,14 @@ internal class ChartControllerTest {
     private lateinit var mvc: MockMvc
 
     @Test
-    fun getChart() {
-        mvc.get("/chart") {
+    fun getChartKeys() {
+        mvc.get("/chart/keys") {
             contentType = MediaType.APPLICATION_JSON
             accept = MediaType.APPLICATION_JSON
         }.andExpect {
             status { isOk() }
             content { contentType(MediaType.APPLICATION_JSON) }
-            content { json("""{"health":2,"family":4}""") }
+            content { json("""["spirituality","health","money","business","social","family","growth","recreation"]""") }
         }
     }
 }
