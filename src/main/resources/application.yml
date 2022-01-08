@@ -1,0 +1,9 @@
+spring:
+  flyway:
+    enabled: false
+    user: databaseUser
+    password: databasePassword
+    schemas: app-db
+    url: "jdbc:h2:mem:DATABASE"
+    locations: "filesystem:db/migration"
+
